@@ -1,0 +1,11 @@
+g++ -Wno-unused-variable -save-temps -fverbose-asm -O1  predict_Optimization.cpp -o predict_with_optimization && g++ -save-temps -fverbose-asm predict_WITHOUT_Optimization.cpp -o predict_without_optimization
+
+As you can see in theses following files :
+
+- predict_WITHOUT_Optimization.s
+- predict_Optimization.s
+
+1 - The first one was compiling without the -O1 option and because of that you can see that there is a loop in the ASM file.
+
+2 - The Second one was compiling with the option -O1 and thanks to that you can't see any loop (any cmp) in the ASM file.
+	WHY ? - i suppose that the compilator didn't see any thing "complicated" in the loop and he can deduced alone the iterate expression until 10000

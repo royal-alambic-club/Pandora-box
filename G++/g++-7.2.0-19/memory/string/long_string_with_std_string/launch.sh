@@ -1,0 +1,1 @@
+g++ std_string_long_string.cpp -o std_string_long_string && g++ std_string_short_string.cpp -o std_string_short_string && echo @@@ LONG STRING @@@ && valgrind ./std_string_long_string && echo @@@ SHORT STRING @@@ &&  valgrind ./std_string_short_string && cat EXPLANATION.txt

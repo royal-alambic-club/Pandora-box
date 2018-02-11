@@ -1,0 +1,1 @@
+There is a string array (on the stack)  with a limited size in the c++ standard class string (std::string)
